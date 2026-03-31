@@ -1,4 +1,4 @@
-// Meta Garden - Extinct Species Database
+// Meta Garden - 3D Three.js Version
 // i18n: Chinese / English bilingual
 
 const speciesDataZH = [
@@ -18,8 +18,9 @@ const speciesDataZH = [
             "刘易斯·卡罗尔的《爱丽丝梦游仙境》让渡渡鸟在流行文化中广为人知"
         ],
         image: 'https://picsum.photos/id/1025/800/1000',
-        size: {width: 280, height: 380},
-        position: {left: '5%', top: '10%'}
+        position: {x: -3, y: 0, z: -2},
+        rotation: {x: 0, y: 0.3, z: 0.1},
+        scale: {x: 2, y: 2.8, z: 1}
     },
     {
         id: 'passenger-pigeon',
@@ -37,8 +38,9 @@ const speciesDataZH = [
             '旅鸽的灭绝激发了二十世纪重要的保护运动'
         ],
         image: 'https://picsum.photos/id/65/800/600',
-        size: {width: 320, height: 260},
-        position: {left: '25%', top: '25%'}
+        position: {x: 0, y: 1, z: -3},
+        rotation: {x: 0, y: -0.2, z: -0.05},
+        scale: {x: 2.5, y: 2, z: 1}
     },
     {
         id: 'tasmanian-tiger',
@@ -56,8 +58,9 @@ const speciesDataZH = [
             '尽管已经灭绝，至今仍不时有未确认的目击报告'
         ],
         image: 'https://picsum.photos/id/1074/800/600',
-        size: {width: 350, height: 280},
-        position: {left: '45%', top: '5%'}
+        position: {x: 2.5, y: -0.5, z: -2.5},
+        rotation: {x: 0.05, y: 0.4, z: 0},
+        scale: {x: 2.8, y: 2.2, z: 1}
     },
     {
         id: 'stellers-sea-cow',
@@ -75,8 +78,9 @@ const speciesDataZH = [
             '行动缓慢性格温顺，很容易成为猎人的目标'
         ],
         image: 'https://picsum.photos/id/1002/1000/600',
-        size: {width: 400, height: 250},
-        position: {left: '30%', top: '48%'}
+        position: {x: -1.5, y: -2, z: -1},
+        rotation: {x: -0.1, y: 0.1, z: 0.05},
+        scale: {x: 3.5, y: 2, z: 1}
     },
     {
         id: 'saint-helena-olive',
@@ -94,8 +98,9 @@ const speciesDataZH = [
             '基因材料保存在种子库中，有可能在未来克隆复活'
         ],
         image: 'https://picsum.photos/id/106/600/800',
-        size: {width: 240, height: 320},
-        position: {left: '65%', top: '35%'}
+        position: {x: 4, y: 1, z: 0},
+        rotation: {x: 0, y: -0.5, z: -0.1},
+        scale: {x: 2, y: 2.5, z: 1}
     },
     {
         id: 'quagga',
@@ -113,8 +118,9 @@ const speciesDataZH = [
             '最后一只圈养斑驴于1883年死于阿姆斯特丹'
         ],
         image: 'https://picsum.photos/id/1069/800/900',
-        size: {width: 280, height: 300},
-        position: {left: '60%', top: '18%'}
+        position: {x: 3, y: 2, z: -1.5},
+        rotation: {x: -0.05, y: -0.3, z: 0.1},
+        scale: {x: 2.2, y: 2.4, z: 1}
     },
     {
         id: 'great-auk',
@@ -132,8 +138,9 @@ const speciesDataZH = [
             '它是近代北大西洋第一种灭绝的不会飞的鸟类'
         ],
         image: 'https://picsum.photos/id/1024/600/900',
-        size: {width: 220, height: 320},
-        position: {left: '75%', top: '45%'}
+        position: {x: -4, y: 1.5, z: -0.5},
+        rotation: {x: 0.1, y: 0.2, z: -0.05},
+        scale: {x: 1.8, y: 2.6, z: 1}
     },
     {
         id: 'franklin-tree',
@@ -151,8 +158,9 @@ const speciesDataZH = [
             '现在所有现存的富兰克林树都是克隆繁殖的'
         ],
         image: 'https://picsum.photos/id/1080/700/900',
-        size: {width: 260, height: 340},
-        position: {left: '12%', top: '45%'}
+        position: {x: -2.5, y: 2, z: -1},
+        rotation: {x: 0.05, y: -0.4, z: 0},
+        scale: {x: 2, y: 2.7, z: 1}
     }
 ];
 
@@ -173,8 +181,9 @@ const speciesDataEN = [
             "Lewis Carroll's Alice in Wonderland helped popularize the dodo in popular culture."
         ],
         image: 'https://picsum.photos/id/1025/800/1000',
-        size: {width: 280, height: 380},
-        position: {left: '5%', top: '10%'}
+        position: {x: -3, y: 0, z: -2},
+        rotation: {x: 0, y: 0.3, z: 0.1},
+        scale: {x: 2, y: 2.8, z: 1}
     },
     {
         id: 'passenger-pigeon',
@@ -192,8 +201,9 @@ const speciesDataEN = [
             'Their extinction inspired major conservation efforts in the 20th century.'
         ],
         image: 'https://picsum.photos/id/65/800/600',
-        size: {width: 320, height: 260},
-        position: {left: '25%', top: '25%'}
+        position: {x: 0, y: 1, z: -3},
+        rotation: {x: 0, y: -0.2, z: -0.05},
+        scale: {x: 2.5, y: 2, z: 1}
     },
     {
         id: 'tasmanian-tiger',
@@ -211,8 +221,9 @@ const speciesDataEN = [
             'Despite its extinction, unconfirmed sightings are still reported today.'
         ],
         image: 'https://picsum.photos/id/1074/800/600',
-        size: {width: 350, height: 280},
-        position: {left: '45%', top: '5%'}
+        position: {x: 2.5, y: -0.5, z: -2.5},
+        rotation: {x: 0.05, y: 0.4, z: 0},
+        scale: {x: 2.8, y: 2.2, z: 1}
     },
     {
         id: 'stellers-sea-cow',
@@ -230,8 +241,9 @@ const speciesDataEN = [
             'It was slow-moving and docile, making it easy prey for hunters.'
         ],
         image: 'https://picsum.photos/id/1002/1000/600',
-        size: {width: 400, height: 250},
-        position: {left: '30%', top: '48%'}
+        position: {x: -1.5, y: -2, z: -1},
+        rotation: {x: -0.1, y: 0.1, z: 0.05},
+        scale: {x: 3.5, y: 2, z: 1}
     },
     {
         id: 'saint-helena-olive',
@@ -249,8 +261,9 @@ const speciesDataEN = [
             'Genetic material is preserved in seed banks for potential future cloning.'
         ],
         image: 'https://picsum.photos/id/106/600/800',
-        size: {width: 240, height: 320},
-        position: {left: '65%', top: '35%'}
+        position: {x: 4, y: 1, z: 0},
+        rotation: {x: 0, y: -0.5, z: -0.1},
+        scale: {x: 2, y: 2.5, z: 1}
     },
     {
         id: 'quagga',
@@ -268,8 +281,9 @@ const speciesDataEN = [
             'The last captive quagga died in Amsterdam in 1883.'
         ],
         image: 'https://picsum.photos/id/1069/800/900',
-        size: {width: 280, height: 300},
-        position: {left: '60%', top: '18%'}
+        position: {x: 3, y: 2, z: -1.5},
+        rotation: {x: -0.05, y: -0.3, z: 0.1},
+        scale: {x: 2.2, y: 2.4, z: 1}
     },
     {
         id: 'great-auk',
@@ -287,8 +301,9 @@ const speciesDataEN = [
             'It was the first flightless bird from the North Atlantic to go extinct in modern times.'
         ],
         image: 'https://picsum.photos/id/1024/600/900',
-        size: {width: 220, height: 320},
-        position: {left: '75%', top: '45%'}
+        position: {x: -4, y: 1.5, z: -0.5},
+        rotation: {x: 0.1, y: 0.2, z: -0.05},
+        scale: {x: 1.8, y: 2.6, z: 1}
     },
     {
         id: 'franklin-tree',
@@ -306,89 +321,151 @@ const speciesDataEN = [
             'All existing Franklinia trees are clones, propagated from the original seeds.'
         ],
         image: 'https://picsum.photos/id/1080/700/900',
-        size: {width: 260, height: 340},
-        position: {left: '12%', top: '45%'}
+        position: {x: -2.5, y: 2, z: -1},
+        rotation: {x: 0.05, y: -0.4, z: 0},
+        scale: {x: 2, y: 2.7, z: 1}
     }
 ];
 
-let currentLang = 'zh'; // default Chinese
+let currentLang = 'zh';
 let currentSpeciesData = speciesDataZH;
 
-// DOM Elements
-const gardenContainer = document.getElementById('garden-container');
-const landingPage = document.getElementById('landing');
-const detailPage = document.getElementById('detail');
-const backBtn = document.getElementById('back-btn');
+// Three.js Variables
+let scene, camera, renderer;
+let speciesMeshes = [];
+let mouse = {x: 0, y: 0};
+let targetRotationY = 0;
+let targetRotationX = 0;
+let currentRotationY = 0;
+let currentRotationX = 0;
+let autoRotateSpeed = 0.08;
 
-// Language switcher
-function addLanguageSwitcher() {
-    const header = document.querySelector('.header');
-    const langDiv = document.createElement('div');
-    langDiv.className = 'language-switcher';
-    langDiv.innerHTML = `
-        <button class="lang-btn ${currentLang === 'zh' ? 'active' : ''}" data-lang="zh">中文</button>
-        <button class="lang-btn ${currentLang === 'en' ? 'active' : ''}" data-lang="en">English</button>
-    `;
-    header.appendChild(langDiv);
-    
-    langDiv.addEventListener('click', (e) => {
-        if (e.target.classList.contains('lang-btn')) {
-            currentLang = e.target.dataset.lang;
-            currentSpeciesData = currentLang === 'zh' ? speciesDataZH : speciesDataEN;
-            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-            e.target.classList.add('active');
-            reRenderGarden();
-            updatePageTexts();
-        }
+// DOM Elements
+const container = document.getElementById('garden-container');
+const detailPanel = document.getElementById('detail-panel');
+const backBtn = document.getElementById('back-btn');
+const langSwitcher = document.getElementById('lang-switcher');
+const mainTitle = document.getElementById('main-title');
+const mainSubtitle = document.getElementById('main-subtitle');
+
+// Initialize Three.js
+function initThreeJS() {
+    // Scene
+    scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x0a140e);
+
+    // Camera
+    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.set(0, 0, 5);
+
+    // Renderer
+    renderer = new THREE.WebGLRenderer({antialias: true});
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    container.insertBefore(renderer.domElement, container.firstChild);
+
+    // Add ambient light
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+    scene.add(ambientLight);
+
+    // Add directional light
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.6);
+    directionalLight.position.set(5, 5, 5);
+    scene.add(directionalLight);
+
+    // Load all species
+    loadAllSpecies();
+
+    // Event listeners
+    container.addEventListener('mousemove', onMouseMove);
+    window.addEventListener('resize', onWindowResize);
+
+    // Start animation loop
+    animate();
+}
+
+function loadTexture(url) {
+    return new Promise((resolve, reject) => {
+        const textureLoader = new THREE.TextureLoader();
+        textureLoader.crossOrigin = "anonymous";
+        textureLoader.load(url, resolve, undefined, reject);
     });
 }
 
-function reRenderGarden() {
-    gardenContainer.innerHTML = '';
-    renderGarden();
-}
-
-function updatePageTexts() {
-    const title = document.querySelector('.title');
-    const subtitle = document.querySelector('.subtitle');
-    const footer = document.querySelector('.landing-footer p');
-    const backBtnText = document.getElementById('back-btn');
-    
-    if (currentLang === 'zh') {
-        title.textContent = '元花园';
-        subtitle.textContent = '珍藏那些已经消失的生命';
-        footer.textContent = '点击任何物种探索它的故事';
-        backBtnText.textContent = '← 返回花园';
-    } else {
-        title.textContent = 'Meta Garden';
-        subtitle.textContent = 'Preserving memory of what once grew and roamed';
-        footer.textContent = 'Click any creature to explore its story';
-        backBtnText.textContent = '← Back to Garden';
+async function loadAllSpecies() {
+    for (const species of currentSpeciesData) {
+        try {
+            const texture = await loadTexture(species.image);
+            texture.colorSpace = THREE.SRGBColorSpace;
+            
+            const geometry = new THREE.PlaneGeometry(species.scale.x, species.scale.y);
+            const material = new THREE.MeshBasicMaterial({
+                map: texture,
+                side: THREE.DoubleSide,
+                transparent: true,
+                opacity: 0.92
+            });
+            
+            const mesh = new THREE.Mesh(geometry, material);
+            mesh.position.set(species.position.x, species.position.y, species.position.z);
+            mesh.rotation.set(species.rotation.x, species.rotation.y, species.rotation.z);
+            mesh.userData.species = species;
+            
+            scene.add(mesh);
+            speciesMeshes.push(mesh);
+        } catch (e) {
+            console.error('Failed to load', species.name, e);
+        }
     }
 }
 
-// Render overlapping species on landing page
-function renderGarden() {
-    currentSpeciesData.forEach(species => {
-        const el = document.createElement('div');
-        el.className = 'species-overlap';
-        el.style.width = `${species.size.width}px`;
-        el.style.height = `${species.size.height}px`;
-        el.style.left = species.position.left;
-        el.style.top = species.position.top;
-        el.innerHTML = `
-            <img src="${species.image}" alt="${species.name}" loading="lazy">
-            <div class="species-label">
-                <h3>${species.name}</h3>
-                <p>${species.scientificName}</p>
-            </div>
-        `;
-        el.addEventListener('click', () => openDetail(species));
-        gardenContainer.appendChild(el);
-    });
+function onMouseMove(event) {
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+    
+    targetRotationY = mouse.x * 0.8;
+    targetRotationX = -mouse.y * 0.3;
 }
 
-// Open detail view
+function onWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+function animate() {
+    requestAnimationFrame(animate);
+
+    // Smooth auto-rotation with mouse influence
+    currentRotationY += (targetRotationY + autoRotateSpeed * 0.2 - currentRotationY) * 0.05;
+    currentRotationX += (targetRotationX - currentRotationX) * 0.05;
+    
+    scene.rotation.y = currentRotationY;
+    scene.rotation.x = currentRotationX;
+
+    renderer.render(scene, camera);
+}
+
+// Raycasting for click detection
+function onClick(event) {
+    const rect = renderer.domElement.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+    const y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+
+    const raycaster = new THREE.Raycaster();
+    const mouseVector = new THREE.Vector2(x, y);
+    raycaster.setFromCamera(mouseVector, camera);
+    
+    const intersects = raycaster.intersectObjects(speciesMeshes);
+    if (intersects.length > 0) {
+        const clickedMesh = intersects[0].object;
+        const species = clickedMesh.userData.species;
+        // Find the full species data in current language
+        const currentSpecies = currentSpeciesData.find(s => s.id === species.id);
+        openDetail(currentSpecies);
+    }
+}
+
 function openDetail(species) {
     document.getElementById('detail-name').textContent = species.name;
     document.getElementById('detail-scientific').textContent = species.scientificName;
@@ -401,11 +478,7 @@ function openDetail(species) {
     document.getElementById('detail-image').alt = species.name;
     
     const factsContainer = document.getElementById('detail-facts');
-    factsContainer.innerHTML = '';
-    const factsTitle = document.createElement('h3');
-    factsTitle.className = 'facts-title';
-    factsTitle.textContent = currentLang === 'zh' ? '关于' + species.name + '的小知识' : 'Interesting Facts';
-    factsContainer.appendChild(factsTitle);
+    factsContainer.innerHTML = '<h3 class="facts-title">' + (currentLang === 'zh' ? '相关知识' : 'Interesting Facts') + '</h3>';
     species.facts.forEach(fact => {
         const factEl = document.createElement('div');
         factEl.className = 'fact-item';
@@ -413,68 +486,54 @@ function openDetail(species) {
         factsContainer.appendChild(factEl);
     });
     
-    // Update labels
-    document.querySelector('.info-item label[for="detail-type"]') || 
-        (document.querySelectorAll('.info-item label')[0].textContent = currentLang === 'zh' ? '类型' : 'Type');
-    document.querySelectorAll('.info-item label')[1].textContent = currentLang === 'zh' ? '灭绝年份' : 'Extinction Year';
-    document.querySelectorAll('.info-item label')[2].textContent = currentLang === 'zh' ? '栖息地' : 'Habitat';
-    document.querySelectorAll('.info-item label')[3].textContent = currentLang === 'zh' ? '分布区域' : 'Region';
-    
-    landingPage.classList.add('hidden');
-    detailPage.classList.remove('hidden');
+    detailPanel.classList.remove('hidden');
+    detailPanel.classList.add('open');
     window.scrollTo(0, 0);
-    
-    // Update URL hash
-    history.pushState({detail: true, speciesId: species.id, lang: currentLang}, '', `#${species.id}?lang=${currentLang}`);
 }
 
-// Back to garden
 function closeDetail() {
-    detailPage.classList.add('hidden');
-    landingPage.classList.remove('hidden');
-    history.pushState({detail: false, lang: currentLang}, '', '#');
+    detailPanel.classList.remove('open');
+    setTimeout(() => {
+        detailPanel.classList.add('hidden');
+    }, 400);
+}
+
+function updatePageTexts() {
+    if (currentLang === 'zh') {
+        mainTitle.textContent = '元花园';
+        mainSubtitle.textContent = '珍藏那些已经消失的生命';
+        backBtn.textContent = '← 返回花园';
+        document.querySelectorAll('.info-item label')[0].textContent = '类型';
+        document.querySelectorAll('.info-item label')[1].textContent = '灭绝年份';
+        document.querySelectorAll('.info-item label')[2].textContent = '栖息地';
+        document.querySelectorAll('.info-item label')[3].textContent = '分布区域';
+    } else {
+        mainTitle.textContent = 'Meta Garden';
+        mainSubtitle.textContent = 'Preserving memory of what once grew and roamed';
+        backBtn.textContent = '← Back to Garden';
+        document.querySelectorAll('.info-item label')[0].textContent = 'Type';
+        document.querySelectorAll('.info-item label')[1].textContent = 'Extinction Year';
+        document.querySelectorAll('.info-item label')[2].textContent = 'Habitat';
+        document.querySelectorAll('.info-item label')[3].textContent = 'Region';
+    }
 }
 
 // Event listeners
+container.addEventListener('click', onClick);
 backBtn.addEventListener('click', closeDetail);
 
-window.addEventListener('popstate', (e) => {
-    if (e.state && e.state.detail) {
-        if (e.state.lang) {
-            currentLang = e.state.lang;
-            currentSpeciesData = currentLang === 'zh' ? speciesDataZH : speciesDataEN;
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.dataset.lang === currentLang);
-            });
-        }
-        const species = currentSpeciesData.find(s => s.id === e.state.speciesId);
-        if (species) openDetail(species);
-    } else {
-        if (e.state && e.state.lang) {
-            currentLang = e.state.lang;
-            currentSpeciesData = currentLang === 'zh' ? speciesDataZH : speciesDataEN;
-        }
-        closeDetail();
+langSwitcher.addEventListener('click', (e) => {
+    if (e.target.classList.contains('lang-btn')) {
+        currentLang = e.target.dataset.lang;
+        currentSpeciesData = currentLang === 'zh' ? speciesDataZH : speciesDataEN;
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        e.target.classList.add('active');
+        updatePageTexts();
     }
 });
 
-// Check if URL has hash on load
+// Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    addLanguageSwitcher();
     updatePageTexts();
-    renderGarden();
-    const hash = window.location.hash.slice(1);
-    const langMatch = hash.match(/lang=(zh|en)/);
-    if (langMatch) {
-        currentLang = langMatch[1];
-        currentSpeciesData = currentLang === 'zh' ? speciesDataZH : speciesDataEN;
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.lang === currentLang);
-        });
-    }
-    const speciesId = hash.split('?')[0];
-    if (speciesId) {
-        const species = currentSpeciesData.find(s => s.id === speciesId);
-        if (species) openDetail(species);
-    }
+    initThreeJS();
 });

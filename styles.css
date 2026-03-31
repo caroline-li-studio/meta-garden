@@ -25,32 +25,45 @@ html, body {
 
 #app {
     min-height: 100vh;
-}
-
-/* Landing Page */
-.landing-page {
-    min-height: 100vh;
     position: relative;
-    padding: 2rem 1rem;
 }
 
-.header {
+/* 3D Garden Container */
+.garden-container-3d {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.garden-container-3d canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
-    padding: 2rem 0 4rem;
-    position: relative;
     z-index: 10;
+    pointer-events: none;
 }
 
 .title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(3rem, 8vw, 6rem);
+    font-size: clamp(2.5rem, 8vw, 5rem);
     font-weight: 700;
     letter-spacing: -0.02em;
     background: linear-gradient(180deg, #ffffff 0%, var(--accent-green) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .subtitle {
@@ -60,6 +73,12 @@ html, body {
     letter-spacing: 0.05em;
 }
 
+.hint {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: rgba(184, 203, 196, 0.6);
+}
+
 .language-switcher {
     margin-top: 1.5rem;
     display: inline-flex;
@@ -67,6 +86,7 @@ html, body {
     background: rgba(255, 255, 255, 0.1);
     padding: 4px;
     border-radius: 8px;
+    pointer-events: auto;
 }
 
 .lang-btn {
@@ -91,110 +111,29 @@ html, body {
     color: white;
 }
 
-.garden-container {
-    position: relative;
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    min-height: 60vh;
-}
-
-.species-overlap {
-    position: absolute;
-    cursor: pointer;
-    transition: var(--transition);
-    filter: grayscale(0.3) brightness(0.9);
-    z-index: 1;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-}
-
-.species-overlap:hover {
-    filter: grayscale(0) brightness(1.05);
-    transform: scale(1.05) translateY(-8px);
-    z-index: 20 !important;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
-}
-
-.species-overlap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: var(--transition);
-}
-
-.species-label {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+/* Detail Panel */
+.detail-panel {
+    position: fixed;
+    top: 0;
     right: 0;
-    padding: 2rem 1rem 1rem;
-    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.85) 100%);
-    opacity: 0;
+    width: 100%;
+    max-width: 900px;
+    height: 100vh;
+    background: rgba(10, 20, 14, 0.96);
+    backdrop-filter: blur(10px);
+    z-index: 20;
+    overflow-y: auto;
+    transform: translateX(100%);
     transition: var(--transition);
-}
-
-.species-overlap:hover .species-label {
-    opacity: 1;
-}
-
-.species-label h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.25rem;
-    margin-bottom: 0.25rem;
-}
-
-.species-label p {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-}
-
-.landing-footer {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    z-index: 10;
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    letter-spacing: 0.1em;
-    opacity: 0.8;
-}
-
-/* Responsive positioning */
-@media (max-width: 768px) {
-    .species-overlap {
-        position: relative !important;
-        margin: 1rem auto;
-        width: 90% !important;
-        height: 200px !important;
-        left: 0 !important;
-        top: 0 !important;
-    }
-    
-    .garden-container {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .species-label {
-        opacity: 1;
-    }
-}
-
-/* Detail Page */
-.detail-page {
-    min-height: 100vh;
     padding: 2rem;
-    background: linear-gradient(180deg, var(--bg-deeper) 0%, var(--bg-dark) 100%);
 }
 
-.detail-page.hidden {
+.detail-panel.hidden {
     display: none;
+}
+
+.detail-panel.open {
+    transform: translateX(0);
 }
 
 .back-button {
@@ -208,6 +147,7 @@ html, body {
     transition: var(--transition);
     backdrop-filter: blur(10px);
     margin-bottom: 2rem;
+    font-family: 'Inter', sans-serif;
 }
 
 .back-button:hover {
@@ -216,11 +156,9 @@ html, body {
 }
 
 .detail-content {
-    max-width: 1200px;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 2rem;
     align-items: start;
 }
 
@@ -231,11 +169,11 @@ html, body {
 }
 
 .detail-image-container {
-    position: sticky;
-    top: 2rem;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 20px 80px rgba(0, 0, 0, 0.6);
+    position: sticky;
+    top: 2rem;
 }
 
 .detail-image {
@@ -317,22 +255,36 @@ html, body {
     line-height: 1.6;
 }
 
-/* Overlay animation */
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0px);
+/* Click indicator for species in 3D */
+.click-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(184, 203, 196, 0.7);
+    font-size: 0.9rem;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .detail-panel {
+        max-width: 100%;
     }
-    50% {
-        transform: translateY(-10px);
+    
+    .header-overlay {
+        top: 1rem;
     }
 }
 
-.species-overlap:nth-child(odd) {
-    animation: float 6s ease-in-out infinite;
+/* Loading indicator */
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    z-index: 5;
 }
-
-.species-overlap:nth-child(even) {
-    animation: float 8s ease-in-out infinite reverse;
-}
-
-/* Vercel configuration */

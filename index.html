@@ -11,25 +11,22 @@
 </head>
 <body>
     <div id="app">
-        <!-- Landing Page with overlapping species -->
-        <section id="landing" class="landing-page">
-            <header class="header">
-                <h1 class="title">Meta Garden</h1>
-                <p class="subtitle">Preserving memory of what once grew and roamed</p>
-            </header>
-            
-            <div id="garden-container" class="garden-container">
-                <!-- Species will be injected here by JavaScript -->
+        <!-- 3D Garden Canvas -->
+        <div id="garden-container" class="garden-container-3d">
+            <div class="header-overlay">
+                <h1 class="title" id="main-title">元花园</h1>
+                <p class="subtitle" id="main-subtitle">珍藏那些已经消失的生命</p>
+                <div class="language-switcher" id="lang-switcher">
+                    <button class="lang-btn active" data-lang="zh">中文</button>
+                    <button class="lang-btn" data-lang="en">English</button>
+                </div>
+                <p class="hint">移动鼠标转动视角 · 点击物种查看详情</p>
             </div>
+        </div>
 
-            <footer class="landing-footer">
-                <p>Click any creature to explore its story</p>
-            </footer>
-        </section>
-
-        <!-- Detail View -->
-        <section id="detail" class="detail-page hidden">
-            <button id="back-btn" class="back-button">← Back to Garden</button>
+        <!-- Detail Panel -->
+        <div id="detail-panel" class="detail-panel hidden">
+            <button id="back-btn" class="back-button">← 返回花园</button>
             <div class="detail-content">
                 <div class="detail-image-container">
                     <img id="detail-image" class="detail-image" alt="" src="">
@@ -40,19 +37,19 @@
                     
                     <div class="info-grid">
                         <div class="info-item">
-                            <label>Type</label>
+                            <label>类型</label>
                             <span id="detail-type"></span>
                         </div>
                         <div class="info-item">
-                            <label>Extinction Year</label>
+                            <label>灭绝年份</label>
                             <span id="detail-extinct"></span>
                         </div>
                         <div class="info-item">
-                            <label>Habitat</label>
+                            <label>栖息地</label>
                             <span id="detail-habitat"></span>
                         </div>
                         <div class="info-item">
-                            <label>Region</label>
+                            <label>分布区域</label>
                             <span id="detail-region"></span>
                         </div>
                     </div>
@@ -62,9 +59,11 @@
                     <div class="facts" id="detail-facts"></div>
                 </div>
             </div>
-        </section>
+        </div>
     </div>
 
+    <!-- Import Three.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
