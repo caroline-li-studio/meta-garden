@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Garden - A Digital Garden of Extinct Species</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Landing Page with overlapping species -->
+        <section id="landing" class="landing-page">
+            <header class="header">
+                <h1 class="title">Meta Garden</h1>
+                <p class="subtitle">Preserving memory of what once grew and roamed</p>
+            </header>
+            
+            <div id="garden-container" class="garden-container">
+                <!-- Species will be injected here by JavaScript -->
+            </div>
+
+            <footer class="landing-footer">
+                <p>Click any creature to explore its story</p>
+            </footer>
+        </section>
+
+        <!-- Detail View -->
+        <section id="detail" class="detail-page hidden">
+            <button id="back-btn" class="back-button">← Back to Garden</button>
+            <div class="detail-content">
+                <div class="detail-image-container">
+                    <img id="detail-image" class="detail-image" alt="" src="">
+                </div>
+                <div class="detail-info">
+                    <h2 id="detail-name" class="species-name"></h2>
+                    <p class="scientific-name" id="detail-scientific"></p>
+                    
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>Type</label>
+                            <span id="detail-type"></span>
+                        </div>
+                        <div class="info-item">
+                            <label>Extinction Year</label>
+                            <span id="detail-extinct"></span>
+                        </div>
+                        <div class="info-item">
+                            <label>Habitat</label>
+                            <span id="detail-habitat"></span>
+                        </div>
+                        <div class="info-item">
+                            <label>Region</label>
+                            <span id="detail-region"></span>
+                        </div>
+                    </div>
+
+                    <div class="description" id="detail-description"></div>
+
+                    <div class="facts" id="detail-facts"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

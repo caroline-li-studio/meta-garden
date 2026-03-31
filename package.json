@@ -1,0 +1,14 @@
+{
+  "name": "meta-garden",
+  "version": "1.0.0",
+  "description": "An electronic garden of extinct plants and animals",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "build": "mkdir -p dist && cp -r index.html styles.css script.js assets dist/ 2>/dev/null || cp *.html *.css *.js dist/",
+    "clean": "rm -rf dist"
+  },
+  "keywords": ["garden", "extinct", "nature", "interactive"],
+  "author": "",
+  "license": "MIT"
+}
