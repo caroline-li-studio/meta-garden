@@ -15,7 +15,7 @@ const speciesData = [
             "The dodo's extinction became a well-known concept because it occurred during recorded human history.",
             "Lewis Carroll's Alice in Wonderland helped popularize the dodo in popular culture."
         ],
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Dodo_rencontr%C3%A9_%C3%A0_l%27%C3%AEle_Maurice_by_Roland_G._Meier.png/800px-Dodo_rencontr%C3%A9_%C3%A0_l%27%C3%AEle_Maurice_by_Roland_G._Meier.png',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/2/28/Dodo_rencontre_a_l%27Ile_Maurice_by_Roland_G._Meier.png',
         size: {width: 280, height: 380},
         position: {left: '5%', top: '10%'}
     },
@@ -34,7 +34,7 @@ const speciesData = [
             'Passenger pigeons lived in enormous migratory flocks that could block out the sun.',
             'Their extinction inspired major conservation efforts in the 20th century.'
         ],
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Passenger_pigeon_%283446831025%29.jpg/800px-Passenger_pigeon_%283446831025%29.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/9/9f/Passenger_pigeon_3446831025.jpg',
         size: {width: 320, height: 260},
         position: {left: '25%', top: '25%'}
     },
@@ -53,7 +53,7 @@ const speciesData = [
             'The last known thylacine died in Hobart Zoo in 1936.',
             'Despite its extinction, unconfirmed sightings are still reported today.'
         ],
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Thylacine_cropped.jpg/800px-Thylacine_cropped.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/8/81/Thylacine_cropped.jpg',
         size: {width: 350, height: 280},
         position: {left: '45%', top: '5%'}
     },
@@ -72,7 +72,7 @@ const speciesData = [
             'It lived in cold, shallow waters near the Bering Sea.',
             'It was slow-moving and docile, making it easy prey for hunters.'
         ],
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Steller%27s_sea_cow_%28Hydrodamalis_gigas%29.jpg/800px-Steller%27s_sea_cow_%28Hydrodamalis_gigas%29.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/b/b8/Stellers_sea_cow_Hydrodamalis_gigas.jpg',
         size: {width: 400, height: 250},
         position: {left: '30%', top: '48%'}
     },
@@ -91,7 +91,7 @@ const speciesData = [
             'Extinction was caused by habitat destruction and disease.',
             'Genetic material is preserved in seed banks for potential future cloning.'
         ],
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Nesiota_elliptica_hab.svg/800px-Nesiota_elliptica_hab.svg.png',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/0/04/Nesiota_elliptica_hab.svg',
         size: {width: 240, height: 320},
         position: {left: '65%', top: '35%'}
     },
@@ -110,7 +110,7 @@ const speciesData = [
             'A selective breeding program is attempting to recreate the quagga through back-breeding.',
             'The last captive quagga died in Amsterdam in 1883.'
         ],
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Quagga_photo.jpg/800px-Quagga_photo.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Quagga_photo.jpg',
         size: {width: 280, height: 300},
         position: {left: '60%', top: '18%'}
     },
@@ -129,12 +129,12 @@ const speciesData = [
             'The last confirmed pair was killed in 1844 on Eldey Island, Iceland.',
             'It was the first flightless bird from the North Atlantic to go extinct in modern times.'
         ],
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Great_auk_by_John_J_Audubon.jpg/800px-Great_auk_by_John_J_Audubon.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Great_auk_by_John_J_Audubon.jpg',
         size: {width: 220, height: 320},
         position: {left: '75%', top: '45%'}
     },
     {
-        id: 'california-golden-poppy',
+        id: 'franklin-tree',
         name: 'Franklin Tree',
         scientificName: 'Franklinia alatamaha',
         type: 'Plant',
@@ -148,7 +148,7 @@ const speciesData = [
             'The tree is named after Benjamin Franklin.',
             'All existing Franklinia trees are clones, propagated from the original seeds.'
         ],
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Franklinia_alatamaha_bloom.jpg/800px-Franklinia_alatamaha_bloom.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/0/02/Franklinia_alatamaha_bloom.jpg',
         size: {width: 260, height: 340},
         position: {left: '12%', top: '45%'}
     }
